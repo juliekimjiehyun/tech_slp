@@ -1,10 +1,7 @@
-.card {
-    position: relative;
-}
 
 .card img {
     width: 100%;
-    display: block;
+    height: 100%;
     border: 2px solid black;
     border-radius: 6px;
     background-color: white;

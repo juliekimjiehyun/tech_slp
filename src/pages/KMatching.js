@@ -1,27 +1,18 @@
 import { useEffect, useState } from 'react';
+import {Container, Row, Col} from 'reactstrap';
 import SingleCard from '../components/SingleCard/SingleCard';
 
 const cardImages = [
-    {"src": "/img/k_images/bicycle.png", matched: false },
     {"src": "/img/k_images/book.png", matched: false},
-    {"src": "/img/k_images/candy.png", matched: false},
-    {"src": "/img/k_images/car.png", matched: false},
     {"src": "/img/k_images/carrot.png", matched: false},
     {"src": "/img/k_images/cat.png", matched: false},
-    {"src": "/img/k_images/chicken.png", matched: false},
     {"src": "/img/k_images/cow.png", matched: false},
     {"src": "/img/k_images/duck.png", matched: false},
-    {"src": "/img/k_images/fork.png", matched: false},
     {"src": "/img/k_images/helicopter.png", matched: false},
     {"src": "/img/k_images/key.png", matched: false},
     {"src": "/img/k_images/milk.png", matched: false},
     {"src": "/img/k_images/pumpkin.png", matched: false},
-    {"src": "/img/k_images/shark.png", matched: false},
-    {"src": "/img/k_images/soccer.png", matched: false},
     {"src": "/img/k_images/taco.png", matched: false},
-    {"src": "/img/k_images/truck.png", matched: false},
-    {"src": "/img/k_images/cactus.png", matched: false},
-    {"src": "/img/k_images/cookie.png", matched: false}
 ]
 
 const K_Matching = () => {
@@ -87,22 +78,28 @@ const K_Matching = () => {
     }, [])
 
   return (
-    <div>
-        <h1>/k/</h1>
-        <button onClick={shuffleCards}>Reset Cards</button>
-        <div className="card-grid">
+    <Container>
+        <Row>
+            <Col>
+                <h1>/k/</h1>
+                <button onClick={shuffleCards}>Reset Cards</button>
+            </Col>
+        </Row>
+        <Row>
             {cards.map(card => (
-                <SingleCard 
+                <Col xs="3">
+                    <SingleCard 
                     key={card.id} 
                     card={card}
                     handleChoice={handleChoice}
                     flipped={card === choiceOne || card === choiceTwo || card.matched}
                     disabled={disabled}
-                />
+                    />
+                </Col>
             ))}
-        </div>
+        </Row>
         <p>Turns: {turns}</p>
-    </div>
+    </Container>
   )
 };
 

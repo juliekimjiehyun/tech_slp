@@ -1,27 +1,18 @@
 import { useEffect, useState } from 'react';
+import {Container, Row, Col} from 'reactstrap';
 import SingleCard from '../components/SingleCard/SingleCard';
 
 const cardImages = [
-    {"src": "/img/g_images/alligator.png", matched: false },
-    {"src": "/img/g_images/bagel.png", matched: false},
     {"src": "/img/g_images/booger.png", matched: false},
     {"src": "/img/g_images/dog.png", matched: false},
-    {"src": "/img/g_images/dragon.png", matched: false},
     {"src": "/img/g_images/egg.png", matched: false},
-    {"src": "/img/g_images/frog.png", matched: false},
     {"src": "/img/g_images/ghost.png", matched: false},
-    {"src": "/img/g_images/girl.png", matched: false},
     {"src": "/img/g_images/glue.png", matched: false},
-    {"src": "/img/g_images/go.png", matched: false},
-    {"src": "/img/g_images/gorilla.png", matched: false},
     {"src": "/img/g_images/guitar.png", matched: false},
     {"src": "/img/g_images/hug.png", matched: false},
     {"src": "/img/g_images/ladybug.png", matched: false},
     {"src": "/img/g_images/pig.png", matched: false},
-    {"src": "/img/g_images/spaghetti.png", matched: false},
     {"src": "/img/g_images/tiger.png", matched: false},
-    {"src": "/img/g_images/kangaroo.png", matched: false},
-    {"src": "/img/g_images/bag.png", matched: false}
 ]
 const GMatching = () => {
     const [cards, setCards] = useState([])
@@ -85,22 +76,27 @@ const GMatching = () => {
     }, [])
   
     return (
-        <div>
-        <h1>/g/</h1>
-        <button onClick={shuffleCards}>Reset Cards</button>
-        <div className="card-grid">
-            {cards.map(card => (
-                <SingleCard 
-                    key={card.id} 
-                    card={card}
-                    handleChoice={handleChoice}
-                    flipped={card === choiceOne || card === choiceTwo || card.matched}
-                    disabled={disabled}
-                />
-            ))}
-        </div>
-        <p>Turns: {turns}</p>
-    </div>
+        <Container>
+            <Row>
+                <Col>
+                    <h1>/g/</h1>
+                    <button onClick={shuffleCards}>Reset Cards</button>
+                </Col>
+            </Row>
+            <Row xs="5">
+                    {cards.map(card => (
+                        <Col key={card.id} xs="3">
+                            <SingleCard 
+                                card={card}
+                                handleChoice={handleChoice}
+                                flipped={card === choiceOne || card === choiceTwo || card.matched}
+                                disabled={disabled}
+                            />
+                        </Col>
+                    ))}
+            </Row>
+            <p>Turns: {turns}</p>
+        </Container>
   )
 }
 
