@@ -11,8 +11,8 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  NavbarText,
-  Button
+  Button,
+  Tooltip
 } from 'reactstrap';
 import './styles.css';
 
@@ -22,17 +22,22 @@ const Header = (args) => {
 
     return (
     <div>
-        <Navbar {...args} expand="sm">
+        <Navbar {...args} expand="sm" className="navbar">
             <NavbarBrand href="/">
                 <img src="/img/LittleLinguistLogo.png" alt="logo" style={{height: 125}}/>
             </NavbarBrand>
             <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="me-auto" navbar>
-            <NavItem>
+          <Nav className="me-auto mx-auto" navbar>
+            <NavItem className="px-3">
               <NavLink href="/">Home</NavLink>
             </NavItem>
-            <UncontrolledDropdown nav inNavbar>
+            <NavItem className="px-3">
+              <NavLink href="https://www.goldenhippo.com/hippolife">
+                Blog
+              </NavLink>
+            </NavItem>
+            <UncontrolledDropdown nav inNavbar className="px-3">
               <DropdownToggle nav caret>
                 Learning Materials
               </DropdownToggle>
@@ -42,7 +47,7 @@ const Header = (args) => {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <Button href="/Contact">Get in touch</Button>
+          <Button href="/Contact" className="contact-btn"> Contact Us</Button>
         </Collapse>
         </Navbar>
         <hr/>
