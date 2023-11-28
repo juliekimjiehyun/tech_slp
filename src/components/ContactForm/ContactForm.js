@@ -1,10 +1,11 @@
 import {Row, Col, Form, FormGroup, Label, Input, Button} from 'reactstrap';
+import './styles.css';
 
 
 const ContactForm = () => {
   return (
-    <div>
-        <Form>
+    <div className="contactBody">
+        <Form className="mt-4 mx-5">
             <Row>
               <Col md={6}>
                 <FormGroup>
@@ -54,7 +55,7 @@ const ContactForm = () => {
                 type="textarea"
               />
             </FormGroup>
-            <FormGroup check>
+            <FormGroup check className="mb-5">
               <Input
                 id="check"
                 name="check"
@@ -66,10 +67,10 @@ const ContactForm = () => {
               >
                 Click to subscribe to our newsletter
               </Label>
-            </FormGroup>
-            <Button>
-              Sign in
+              <Button style={{marginLeft: "5%"}}>
+              Send
             </Button>
+            </FormGroup>
         </Form>
     </div>
   )
