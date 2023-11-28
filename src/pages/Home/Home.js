@@ -4,7 +4,7 @@ import './styles.css';
 
 const Home = () => {
   return (
-    <Container className="container">
+    <Container>
       <div>
         <Row className="mb-2">
           <Col>

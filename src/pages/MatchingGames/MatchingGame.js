@@ -1,54 +1,40 @@
-import {Container, Row, Col, Button} from 'reactstrap';
+import { Container, Row, Col, Button } from 'reactstrap';
+import './styles.css';
+
+const buttonData = [
+  { label: '/k/', href: '/KMatching'},
+  { label: '/g/', href: '/GMatching' },
+  { label: '/f/'},
+  { label: '/v/'},
+  { label: '/s/'},
+  { label: '/z/'},
+  { label: '/l/'},
+  { label: '/r/'},
+  { label: '/s/-blends'},
+  { label: '/l/-blends'},
+  { label: '/r/-blends'},
+  { label: 'Mixed'},
+];
 
 const MatchingGame = () => {
   return (
-    <Container>
-        <h1>Matching Game</h1>
-        <h3>Target Sounds</h3>
+    <div>
+      <h1>Matching Game</h1>
+      <h3>Target Sounds</h3>
+      <Container>
         <Row>
-            <Col>
-                <Button href="/KMatching">/k/</Button>
+            {buttonData.map((button, index) => (
+            <Col xs="3" key={index}>
+              <Button className="targetBtn" href={button.href}>
+                {button.label}
+              </Button>
             </Col>
-            <Col>
-                <Button href="/GMatching">/g/</Button>
-            </Col>
-            <Col>
-                <Button>/f/</Button>
-            </Col>
-            <Col>
-                <Button>/v/</Button>
-            </Col>
-        </Row>
-        <Row>
-            <Col>
-                <Button>/s/</Button>
-            </Col>
-            <Col>
-                <Button>/z/</Button>
-            </Col>
-            <Col>
-                <Button>/l/</Button>
-            </Col>
-            <Col>
-                <Button>/r/</Button>
-            </Col>
-        </Row>
-        <Row>
-            <Col>
-                <Button>/s/-blends</Button>
-            </Col>
-            <Col>
-                <Button>/l/-blends</Button>
-            </Col>
-            <Col>
-                <Button>/r/-blends</Button>
-            </Col>
-            <Col>
-                <Button>Mixed</Button>
-            </Col>
-        </Row>
-    </Container>
-  )
-}
+         
+        ))}
+         </Row>
+      </Container>
+    </div>
+  );
+};
 
-export default MatchingGame
+export default MatchingGame;

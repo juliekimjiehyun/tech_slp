@@ -22,7 +22,7 @@ const Header = (args) => {
 
     return (
     <div>
-        <Navbar {...args} expand="sm" className="navbar">
+        <Navbar {...args} expand="md" className="navbar">
             <NavbarBrand href="/">
                 <img src="/img/LittleLinguistLogo.png" alt="logo" style={{height: 125}}/>
             </NavbarBrand>

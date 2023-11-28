@@ -1,0 +1,19 @@
+h1 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 200
+}
+
+.targetBtn {
+    background-color: #6830d6;
+    font-size: 1em;
+    font-weight: 500;
+    width: 100%; 
+    padding: 25%;
+    margin: 5%;
+    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.5);
+  }
+  

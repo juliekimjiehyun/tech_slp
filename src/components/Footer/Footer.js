@@ -5,7 +5,7 @@ import './styles.css';
 const Footer = () => {
     return (
         <footer className="footer">
-            <Container className="text-center my-5 container">
+            <Container className="text-center my-5">
                 <Row className="justify-content-center">
                         <h5>
                             Less Planning = Less Stress
