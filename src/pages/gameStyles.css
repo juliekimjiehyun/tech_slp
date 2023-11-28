@@ -1,0 +1,13 @@
+@media only screen and (min-width: 993px) {
+    .gridSize {
+      width: 70%;
+      margin: auto;
+    }
+  }
+
+@media only screen and (min-width: 1201px) {
+  .gridSize {
+    width: 50%;
+    margin: auto;
+  }
+}

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
-import {Container, Row, Col} from 'reactstrap';
+import {Container, Row, Col, Button} from 'reactstrap';
 import SingleCard from '../components/SingleCard/SingleCard';
+import './gameStyles.css'
 
 const cardImages = [
     {"src": "/img/k_images/book.png", matched: false},
@@ -82,23 +83,24 @@ const K_Matching = () => {
         <Row>
             <Col>
                 <h1>/k/</h1>
-                <button onClick={shuffleCards}>Reset Cards</button>
             </Col>
         </Row>
-        <Row>
-            {cards.map(card => (
-                <Col xs="3">
-                    <SingleCard 
-                    key={card.id} 
-                    card={card}
-                    handleChoice={handleChoice}
-                    flipped={card === choiceOne || card === choiceTwo || card.matched}
-                    disabled={disabled}
-                    />
-                </Col>
-            ))}
-        </Row>
+        <div className="gridSize">
+            <Row className="my-5">
+                {cards.map(card => (
+                    <Col key={card.id} xs="3">
+                        <SingleCard 
+                        card={card}
+                        handleChoice={handleChoice}
+                        flipped={card === choiceOne || card === choiceTwo || card.matched}
+                        disabled={disabled}
+                        />
+                    </Col>
+                ))}
+            </Row>
+        </div>
         <p>Turns: {turns}</p>
+        <Button className="mx-auto d-block mb-5" onClick={shuffleCards}>Reset Cards</Button>
     </Container>
   )
 };

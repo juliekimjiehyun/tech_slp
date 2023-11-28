@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
-import {Container, Row, Col} from 'reactstrap';
+import {Container, Row, Col, Button} from 'reactstrap';
 import SingleCard from '../components/SingleCard/SingleCard';
+import './gameStyles.css'
 
 const cardImages = [
     {"src": "/img/g_images/booger.png", matched: false},
@@ -80,10 +81,10 @@ const GMatching = () => {
             <Row>
                 <Col>
                     <h1>/g/</h1>
-                    <button onClick={shuffleCards}>Reset Cards</button>
                 </Col>
             </Row>
-            <Row xs="5">
+            <div className="gridSize">
+            <Row className="my-5">
                     {cards.map(card => (
                         <Col key={card.id} xs="3">
                             <SingleCard 
@@ -91,11 +92,14 @@ const GMatching = () => {
                                 handleChoice={handleChoice}
                                 flipped={card === choiceOne || card === choiceTwo || card.matched}
                                 disabled={disabled}
+                                className="cardLayout"
                             />
                         </Col>
                     ))}
             </Row>
+            </div>
             <p>Turns: {turns}</p>
+            <Button className="mx-auto d-block mb-5" onClick={shuffleCards}>Reset Cards</Button>
         </Container>
   )
 }
