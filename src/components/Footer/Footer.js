@@ -5,51 +5,38 @@ import './styles.css';
 const Footer = () => {
     return (
         <footer className="footer">
-            <Container>
-                <Row>
-                    <Col>
-                        <h4>
-                            Less Planning = Less Stress
-                        </h4>
+            <Container className="text-center my-5 container">
+                <Row className="justify-content-center">
                         <h5>
-                            Subscribe Here for weekly newsletters
+                            Less Planning = Less Stress
                         </h5>
-                        <Form>
-                            <FormGroup>
-                                <Label for="subscribeEmail">Email</Label>
-                                <Input
-                                    id="subscribeEmail"
-                                    name="email"
-                                    placeholder="JohnDoe@email.com"
-                                    type="email"
-                                />
-                                <Button>
-                                    Submit
-                                </Button>
-                            </FormGroup>
-                        </Form>
-                    </Col>
-                    <Col>
-                        <p>IMG_HERE</p>
-                    </Col>
+                        <p>
+                            Subscribe Here for weekly newsletters
+                        </p>
+                        <div className="form">
+                            <Form>
+                                <FormGroup className="d-flex">
+                                    <Input
+                                        name="email"
+                                        placeholder="JohnDoe@email.com"
+                                        type="email"
+                                    />
+                                    <Button className="btn">
+                                        Submit
+                                    </Button>
+                                </FormGroup>
+                            </Form>
+                        </div>
                 </Row>
                 <hr/>
-                <Row>
-                    <Col className="footerLogos">
-                    </Col>
+                <Row className="justify-content-center mt-5">
+                        <a>Privacy Policy   |   Terms of Use</a>
                 </Row>
-                <Row className="footerText">
-                    <Col>
-                        <a>Privacy Policy   |   </a>
-                        <a>     Terms of Use</a>
-                    </Col>
-                </Row>
-                <Row className="footerText">
-                    <Col>
+                <Row className="justify-content-center">
                     © Little Linguist Resources | All Rights Reserved
-                    </Col>
                 </Row>
             </Container>
+            <hr/>
         </footer >
     )
 }

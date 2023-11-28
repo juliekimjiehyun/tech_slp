@@ -55,7 +55,7 @@ const Home = () => {
         </Badge>
       </div>
       
-      <div>
+      <div className="mb-5">
         <Row className="mt-5">
           <h1 className="mt-5">A message from fellow SLPs</h1>
         </Row>

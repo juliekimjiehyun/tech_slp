@@ -45,6 +45,7 @@ const Header = (args) => {
           <Button href="/Contact">Get in touch</Button>
         </Collapse>
         </Navbar>
+        <hr/>
     </div>
   )
 }
