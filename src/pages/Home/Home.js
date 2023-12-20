@@ -1,18 +1,44 @@
 import React from 'react';
 import {Container, Row, Col, Button, Badge} from 'reactstrap';
+import {useAnimate, motion} from 'framer-motion';
 import './styles.css';
 
+export const UseAnimate = () => {
+  return (
+    <div>
+      <Home />
+    </div>
+  );
+};
+
 const Home = () => {
+  const [scope, animate] = useAnimate()
+
+  const handleAnimate = async () => {
+    await animate('#button', { rotate: '360deg' });
+  }
+  const handleBtnClick = () => {
+    window.location.href = "/MatchingGame";
+  };
+
   return (
     <Container>
-      <div>
+      <div ref={scope}>
         <Row className="mb-2">
           <Col>
             <h1 style={{fontSize: "3.7rem"}}>Speech Therapy Activities</h1>
-            <h3 style={{fontSize: "1.2rem"}}><span>Your virtual materials closet just a click away!</span></h3>
-            <div className="text-center">
-              <Button cssModule={{btn: "custom-btn"}} href="/MatchingGame">Get Started ✨</Button>
-            </div>
+            <h3 style={{fontSize: "1.2rem"}}><span>Your virtual materials closet is just a click away!</span></h3>
+            <motion.div className="text-center" whileInView={{opacity: 0}}/>
+              <div className="container">
+              <Button 
+                id='button'
+                cssModule={{btn: "custom-btn"}} 
+                onMouseEnter={() => handleAnimate()}
+                onClick={handleBtnClick}
+              >
+                Get Started ✨
+              </Button>
+              </div>
           </Col>
         </Row>
         <Row className="p-5 d-flex align-items-center">

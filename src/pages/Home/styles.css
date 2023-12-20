@@ -20,6 +20,11 @@ h5 {
    text-align: center;
 }
 
+.container {
+    display: grid;
+    place-items: center;
+}
+
 .custom-btn {
     background-color: #6830d6;
     color: white;
