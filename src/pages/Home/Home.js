@@ -23,23 +23,21 @@ const Home = () => {
 
   return (
     <Container>
-      <div ref={scope}>
+      <div ref={scope} className="center-align">
         <Row className="mb-2">
           <Col>
-            <h1 style={{fontSize: "3.7rem"}}>Speech Therapy Activities</h1>
+\            <h1 style={{fontSize: "3.7rem"}}>Speech Therapy Activities</h1>
             <h3 style={{fontSize: "1.2rem"}}><span>Your virtual materials closet is just a click away!</span></h3>
             <motion.div className="text-center" whileInView={{opacity: 0}}/>
-              <div className="container">
-              <Button 
+          </Col>
+          <Button 
                 id='button'
                 cssModule={{btn: "custom-btn"}} 
-                onMouseEnter={() => handleAnimate()}
+                //onMouseEnter={() => handleAnimate()}
                 onClick={handleBtnClick}
               >
                 Get Started ✨
               </Button>
-              </div>
-          </Col>
         </Row>
         <Row className="p-5 d-flex align-items-center">
           <Col md="4">

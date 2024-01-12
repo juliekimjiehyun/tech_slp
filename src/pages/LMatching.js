@@ -4,16 +4,16 @@ import SingleCard from '../components/SingleCard/SingleCard';
 import './gameStyles.css'
 
 const cardImages = [
-    {"src": "/img/l_images/bicycle.png", matched: false},
-    {"src": "/img/l_images/bus.png", matched: false},
-    {"src": "/img/l_images/glasses.png", matched: false},
-    {"src": "/img/l_images/horse.png", matched: false},
-    {"src": "/img/l_images/muscle.png", matched: false},
-    {"src": "/img/l_images/octopus.png", matched: false},
+    {"src": "/img/l_images/apple.png", matched: false},
+    {"src": "/img/l_images/balloons.png", matched: false},
+    {"src": "/img/l_images/ladybug.png", matched: false},
+    {"src": "/img/l_images/lion.png", matched: false},
+    {"src": "/img/l_images/lips.png", matched: false},
+    {"src": "/img/l_images/melon.png", matched: false},
+    {"src": "/img/l_images/snail.png", matched: false},
+    {"src": "/img/l_images/toilet.png", matched: false},
+    {"src": "/img/l_images/whale.png", matched: false},
     {"src": "/img/l_images/pencil.png", matched: false},
-    {"src": "/img/l_images/seven.png", matched: false},
-    {"src": "/img/l_images/sock.png", matched: false},
-    {"src": "/img/l_images/sun.png", matched: false},
 ]
 
 const L_Matching = () => {
@@ -82,7 +82,7 @@ const L_Matching = () => {
     <Container>
         <Row>
             <Col>
-                <h1>/s/</h1>
+                <h1>/l/</h1>
             </Col>
         </Row>
         <div className="gridSize">

@@ -34,7 +34,7 @@ const Header = (args) => {
             </NavItem>
             <NavItem className="px-3">
               <NavLink href="https://www.goldenhippo.com/hippolife">
-                Blog
+                TPT Store
               </NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar className="px-3">

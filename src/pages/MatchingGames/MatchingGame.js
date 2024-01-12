@@ -9,7 +9,7 @@ const buttonData = [
   { label: '/s/', href: '/SMatching'},
   { label: '/z/', href: '/ZMatching'},
   { label: '/l/', href: '/LMatching'},
-  { label: '/r/', href: './RMatching'},
+  { label: '/r/', href: '/RMatching'},
   { label: '/s/-blends', href: './SBlendsMatching'},
   { label: '/l/-blends', href: './LBlendsMatching'},
   { label: '/r/-blends', href: './RBlendsMatching'},
