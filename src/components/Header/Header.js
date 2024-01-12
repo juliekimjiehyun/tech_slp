@@ -33,7 +33,7 @@ const Header = (args) => {
               <NavLink href="/">Home</NavLink>
             </NavItem>
             <NavItem className="px-3">
-              <NavLink href="https://www.goldenhippo.com/hippolife">
+              <NavLink href="https://www.teacherspayteachers.com/Store/Littlelinguistsresources">
                 TPT Store
               </NavLink>
             </NavItem>
